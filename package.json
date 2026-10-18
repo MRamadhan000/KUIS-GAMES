@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently -p none \"serwist build --watch\" \"next dev\"",
-    "build": "next build && serwist build",
+    "build": "next build && cross-env NODE_ENV=production serwist build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -21,6 +21,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "concurrently": "^10.0.6",
+    "cross-env": "^10.1.0",
     "esbuild": "^0.28.2",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
